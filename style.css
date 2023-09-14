@@ -1,0 +1,272 @@
+/* 
+Yang harus ditambahin:
+- transisi
+- drawer navigation (JS DOM)
+- z-index gambar 
+- pop up katalog & tnc (js)
+- slider katalog (js)
+- validasi tanggal (js)
+- tambahin footer
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #8d2ce8;
+  color: white;
+}
+
+/* Tambahan */
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}
+/*  */
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  z-index: 999;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  background-color: white;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+.nav-list li {
+  list-style-type: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+}
+
+.nav-list li:hover a {
+  color: #8d2ce8;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  padding: 4rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  margin-block: 100px;
+}
+
+#home {
+  display: flex;
+}
+
+.home-description a,
+button {
+  padding: 0.8rem 2.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #8d2ce8;
+  text-decoration: none;
+  line-height: 1rem;
+}
+
+.home-description a {
+  line-height: 6;
+}
+
+.content-image-1 img {
+  width: 600px;
+}
+
+.catalogue {
+  display: flex;
+  width: auto;
+}
+
+.catalogue :hover {
+  background-color: #8d2ce8;
+  color: white;
+}
+
+figcaption {
+  padding: 0 1.5rem;
+}
+
+figure img {
+  width: 300px;
+  height: 300px;
+  /* display: flex; */
+}
+
+figure a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-weight: 700;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+h1,
+h2 {
+  color: #8d2ce8;
+}
+
+p {
+  text-align: justify;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+#rent-form {
+  display: flex;
+}
+
+#rent-form img {
+  width: 600px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 99px;
+}
+
+input:focus {
+  border: none;
+  outline: 3px solid #8d2ce8;
+  border-radius: 99px;
+}
+
+.checkbox {
+  outline: none;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  margin: 0 2rem;
+  flex-direction: row-reverse;
+}
+
+form,
+form a {
+  line-height: 3;
+}
+
+aside {
+  display: flex;
+}
+
+aside img {
+  margin: auto;
+  min-width: 250px;
+  width: 300px;
+}
+
+footer {
+  width: 100% auto;
+  background-color: #8d2ce8;
+  color: white;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Media Query */
+@media screen and (max-width: 1300px) {
+  * {
+    max-width: 100%;
+  }
+
+  #home {
+    display: block;
+  }
+
+  .catalogue {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #rent-form {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  main {
+    padding: 4rem 2rem;
+  }
+
+  figure img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  input[type="checkbox"] {
+    width: 45px;
+  }
+}

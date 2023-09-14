@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luna Cosrent</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="img/logo-luna.png" type="img/logo-luna.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- Page -->
+  <body>
+    <!-- Header -->
+    <header class="navbar-container">
+      <div class="logo">
+        <a href="#home">
+          <img src="img/logo-luna.png" alt="Logo Luna Cosrent" />
+        </a>
+      </div>
+      <!-- Navbar -->
+      <nav class="nav-list">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#popular-rentals">Popular Rentals</a></li>
+          <li><a href="#new-costumes">New Costumes</a></li>
+          <li><a href="#rent-form">Form</a></li>
+        </ul>
+      </nav>
+      <!-- End of Navbar -->
+    </header>
+    <!-- End of Header -->
+
+    <!--  Content -->
+    <main>
+      <div class="container">
+        <!-- Home -->
+        <div id="home">
+          <article class="home-description">
+            <h1>Luna Cosrent</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum perferendis similique vitae error, rerum earum adipisci quas neque libero, enim magnam dolores repudiandae, tempora harum?</p>
+            <a href="#rent-form">RENT NOW!</a>
+          </article>
+
+          <aside class="content-image-1">
+            <img src="img/content-image-1.png" alt="Content Image 1" />
+          </aside>
+        </div>
+        <!-- End of Home-->
+
+        <!-- Popular Rentals -->
+        <div id="popular-rentals">
+          <h2>Popular Rentals</h2>
+          <div class="catalogue">
+            <figure>
+              <a href="#">
+                <img src="img/pop-ai-hoshino.png" alt="Ai Hoshino" />
+                <figcaption>
+                  <h3>Ai Hoshino</h3>
+                  <h4>Rp85.000/3 hari</h4>
+                </figcaption>
+              </a>
+            </figure>
+
+            <figure>
+              <a href="#">
+                <img src="img/pop-kana-arima.png" alt="Kana Arima" />
+                <figcaption>
+                  <h3>Kana Arima</h3>
+                  <h4>Rp75.000/3 hari</h4>
+                </figcaption>
+              </a>
+            </figure>
+
+            <figure>
+              <a href="#">
+                <img src="img/pop-anya-forger.png" alt="Anya Forger" />
+                <figcaption>
+                  <h3>Anya Forger</h3>
+                  <h4>Rp65.000/3 hari</h4>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+        </div>
+        <!-- End of Popular Rentals -->
+
+        <!-- New Costume -->
+        <div id="new-costumes">
+          <h2>New Costumes</h2>
+          <div class="catalogue">
+            <figure>
+              <a href="#">
+                <img src="img/new-kocho.png" alt="Shinobu Kocho" />
+                <figcaption>
+                  <h3>Shinobu Kocho</h3>
+                  <h4>Rp100.000/3 hari</h4>
+                </figcaption>
+              </a>
+            </figure>
+
+            <figure>
+              <a href="#">
+                <img src="img/new-yor-forger.png" alt="Yor Forger" />
+                <figcaption>
+                  <h3>Kana Arima</h3>
+                  <h4>Rp75.000/3 hari</h4>
+                </figcaption>
+              </a>
+            </figure>
+
+            <figure>
+              <a href="#">
+                <img src="img/new-hutao.png" alt="Hutao" />
+                <figcaption>
+                  <h3>Hutao</h3>
+                  <h4>Rp110.000/3 hari</h4>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+        </div>
+        <!-- End of New Costume -->
+
+        <!-- Rent Form -->
+        <div id="rent-form">
+          <aside class="content-image-2">
+            <img src="img/content-image-2.png" alt="Content Image 2" />
+          </aside>
+
+          <!-- Form -->
+          <div id="form">
+            <h2>Form</h2>
+            <form action="#" method="post">
+              <label for="name">Nama</label>
+              <input type="text" name="name" id="name" placeholder="Luna" required oninvalid="this.setCustomValidity('Wajib diisi yaa!')" oninput="this.setCustomValidity('')" />
+
+              <label for="nomorWA">Nomor Whatsapp</label>
+              <input
+                type="tel"
+                name="nomorWA"
+                id="nomorWA"
+                placeholder="6281234567890"
+                required
+                pattern="^628\d{}$"
+                maxlength="14"
+                oninvalid="this.setCustomValidity('Pastikan diisi dan formatnya harus benar yaa!')"
+                oninput="this.setCustomValidity('')"
+              />
+
+              <label for="kostum">Pilihan Kostum</label>
+              <input type="text" name="kostum" id="kostum" required placeholder="Ai Hoshino" oninvalid="this.setCustomValidity('Wajib diisi yaa!')" oninput="this.setCustomValidity('')" />
+
+              <!-- belum bisa validasi -->
+              <label for="tanggal-mulai">Tanggal Sewa</label>
+              <input type="date" name="tanggal-mulai" id="tanggal-mulai" required oninvalid="this.setCustomValidity('Wajib diisi yaa!')" oninput="this.setCustomValidity('')" />
+              <label for="tanggal-akhir">Sampai Tanggal</label>
+              <input type="date" name="tanggal-akhir" id="tanggal-akhir" required oninvalid="this.setCustomValidity('Wajib diisi yaa!')" oninput="this.setCustomValidity('')" />
+
+              <div class="checkbox">
+                <label for="checkbox">
+                  Dengan mengirimkan data di atas, aku setuju dan sudah membaca
+                  <a href="#">Syarat dan Ketentuan.</a>
+                </label>
+                <input type="checkbox" name="checkbox" id="checkbox" required oninvalid="this.setCustomValidity('Jangan lupa dicentang yaa!')" oninput="this.setCustomValidity('')" />
+                <p></p>
+              </div>
+              <p>Jika kamu ingin bertanya, kamu bisa mengubungi <a href="#">Admin Luna (Whatsapp)</a> yaa!</p>
+
+              <button type="submit">RENT NOW!</button>
+            </form>
+          </div>
+          <!-- End of Form -->
+        </div>
+        <!-- End for Rent Form -->
+      </div>
+    </main>
+    <!-- End of Content -->
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; Made by Aqmarina Shabihah (2023)</p>
+    </footer>
+    <!-- End of Footer -->
+  </body>
+  <!-- End of Page -->
+</html>
